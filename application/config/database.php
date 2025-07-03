@@ -75,10 +75,6 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	// 'hostname' => '103.163.138.27',
-	// 'username' => 'tokojeru_amerta',
-	// 'password' => 'amertabotanicals12@',
-	// 'database' => 'tokojeru_amerta_db',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
