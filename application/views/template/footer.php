@@ -87,9 +87,6 @@
                         <a href="#"><img src="<?= base_url('vendor/template/') ?>images/payment/jpg/01.jpg" alt="payment"></a>
                         <a href="#"><img src="<?= base_url('vendor/template/') ?>images/payment/jpg/02.png" alt="payment"></a>
                         <a href="#"><img src="<?= base_url('vendor/template/') ?>images/payment/jpg/04.jpg" alt="payment"></a>
-                        <a href="#"><img src="<?= base_url('vendor/template/') ?>images/payment/jpg/051.png" alt="payment"></a>
-                        <a href="#"><img src="<?= base_url('vendor/template/') ?>images/payment/jpg/06.png" alt="payment"></a>
-                        <a href="#"><img src="<?= base_url('vendor/template/') ?>images/payment/jpg/07.png" alt="payment"></a>
                     </div>
                 </div>
             </div>
@@ -126,7 +123,7 @@
 <!-- Magnific Popup-->
 <script src="<?= base_url('vendor/admin/') ?>assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="<?= base_url('vendor/admin/') ?>assets/js/pages/gallery.init.js"></script>
-<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <!--=====================================
                     JS LINK PART END
         =======================================-->

@@ -3,82 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Global_model extends CI_Model
 {
-    public function get_menu()
-    {
-        $this->db->select('*');
-        $this->db->from('user_menu');
-        $this->db->where('is_active', 1);
-        $query = $this->db->get()->result_array();
-        return $query;
-    }
-    public function get_menu_joined($role_id)
-    {
-        $this->db->select('*');
-        $this->db->from('user_menu');
-        $this->db->join('user_access_menu', 'user_access_menu.menu_id = user_menu.menu_id');
-        $this->db->where('user_access_menu.role_id', $role_id);
-        $this->db->where('user_menu.is_active', 1);
-        $this->db->order_by('user_access_menu.menu_id', 'ASC');
-        $query = $this->db->get()->result_array();
-        return $query;
-    }
-    public function get_menu_access($role_id, $menu_id)
-    {
-        $this->db->select('*');
-        $this->db->from('user_access_menu');
-        $this->db->where('role_id', $role_id);
-        $this->db->where('menu_id', $menu_id);
-        $query = $this->db->get()->row_array();
-        return $query;
-    }
     public function get_user($id)
     {
         $this->db->select('*');
         $this->db->from('user');
         $this->db->where('email', $id);
         $query = $this->db->get()->row_array();
-        return $query;
-    }
-    public function get_userByID($id)
-    {
-        $this->db->select('*');
-        $this->db->from('user');
-        $this->db->join('user_role', 'user_role.role_id = user.role_id');
-        $this->db->where('user.id', $id);
-        $query = $this->db->get()->row_array();
-        return $query;
-    }
-    public function get_users()
-    {
-        $this->db->select('*');
-        $this->db->from('user');
-        $this->db->join('user_role', 'user_role.role_id = user.role_id');
-        $this->db->where('user.role_id !=', 2);
-        $this->db->where('user.email !=', 'dev@amertabotanical.com');
-        $query = $this->db->get()->result_array();
-        return $query;
-    }
-    function get_validEmail($email)
-    {
-        $this->db->select('*');
-        $this->db->from('user');
-        $this->db->where('email', $email);
-        $query = $this->db->get()->row_array();
-        return $query;
-    }
-    public function get_role()
-    {
-        $this->db->select('*');
-        $this->db->from('user_role');
-        $this->db->where('role_id !=', 2);
-        $query = $this->db->get()->result_array();
-        return $query;
-    }
-    public function get_roles()
-    {
-        $this->db->select('*');
-        $this->db->from('user_role');
-        $query = $this->db->get()->result_array();
         return $query;
     }
 
@@ -249,19 +179,5 @@ class Global_model extends CI_Model
         $this->db->order_by('produk_review.tanggal_review', 'DESC');
         $query = $this->db->get();
         return $query;
-    }
-
-    public function get_po()
-    {
-        $this->db->select('*');
-        $this->db->from('preorder');
-        return $this->db->get()->result_array();
-    }
-    public function get_preorderByID($id)
-    {
-        $this->db->select('*');
-        $this->db->from('preorder');
-        $this->db->where('id_po', $id);
-        return $this->db->get()->row_array();
     }
 }

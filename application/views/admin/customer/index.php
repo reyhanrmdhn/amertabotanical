@@ -25,7 +25,7 @@
                         <?= $this->session->flashdata('message'); ?>
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title mb-3">Customer List</h4>
+                                <h4 class="header-title">Customer List</h4>
                                 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                     <thead>
                                         <tr>

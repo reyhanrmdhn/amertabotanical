@@ -54,7 +54,10 @@
 
 <!--tinymce js-->
 <script src="<?= base_url('vendor/admin/') ?>assets/libs/tinymce/tinymce.min.js"></script>
-
+<!-- init js -->
+<script src="<?= base_url('vendor/admin/') ?>assets/js/pages/form-editor.init.js"></script>
+<!--ck editor js-->
+<script src="<?= base_url('vendor/admin/') ?>assets/libs/ckeditor4/ckeditor.js"></script>
 
 
 <script>
