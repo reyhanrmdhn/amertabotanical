@@ -42,22 +42,26 @@
                         <span><?= $user['name']; ?></span>
                     </a>
                 <?php } else { ?>
-                    <a href="<?= base_url('auth') ?>" class="header-widget" title="My Account" style="margin-right:30px">
-                        <img src="<?= base_url('vendor/template/') ?>images/user.png" alt="user">
-                        <span>login</span>
-                    </a>
+                    <?php if (is_ecommerce()) : ?>
+                        <a href="<?= base_url('auth') ?>" class="header-widget" title="My Account" style="margin-right:30px">
+                            <img src="<?= base_url('vendor/template/') ?>images/user.png" alt="user">
+                            <span>login</span>
+                        </a>
+                    <?php endif; ?>
                 <?php } ?>
-                <div class="header-widget-group">
-                    <button class="header-widget header-cart" title="Cartlist">
-                        <i class="fas fa-shopping-basket"></i>
-                        <sup class="cart-item-total"></sup>
-                    </button>
-                    <?php if ($this->session->userdata('email')) { ?>
-                        <button class="header-widget" title="Logout" style="margin-left: 10px" data-bs-toggle="modal" data-bs-target="#logoutModal">
-                            <i class="fas fa-sign-out-alt logoutBtn"></i>
+                <?php if (is_ecommerce()) : ?>
+                    <div class="header-widget-group">
+                        <button class="header-widget header-cart" title="Cartlist">
+                            <i class="fas fa-shopping-basket"></i>
+                            <sup class="cart-item-total"></sup>
                         </button>
-                    <?php } ?>
-                </div>
+                        <?php if ($this->session->userdata('email')) { ?>
+                            <button class="header-widget" title="Logout" style="margin-left: 10px" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt logoutBtn"></i>
+                            </button>
+                        <?php } ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </header>
@@ -302,12 +306,14 @@
                                 <div style="height: 200px">
                                     <p class="view-desc productDesc"></p>
                                 </div>
-                                <div class="view-add-group mt-3">
-                                    <button class="product-add add-cart" title="Add to Cart">
-                                        <i class="fas fa-shopping-basket"></i>
-                                        <span>add to cart</span>
-                                    </button>
-                                </div>
+                                <?php if (is_ecommerce()) : ?>
+                                    <div class="view-add-group mt-3">
+                                        <button class="product-add add-cart" title="Add to Cart">
+                                            <i class="fas fa-shopping-basket"></i>
+                                            <span>add to cart</span>
+                                        </button>
+                                    </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

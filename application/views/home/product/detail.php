@@ -102,12 +102,14 @@
                             <li><a href="#" class="icofont-instagram" title="Instagram"></a></li>
                         </ul>
                     </div> -->
-                    <div class="details-add-group">
-                        <button <?php if ($produk['stok'] == 0) { ?> disabled <?php } ?> class="product-add add-cart" title="Add to Cart" data-name="<?= $produk['nama_produk']; ?>" data-price="<?= $produk['harga'] ?>" data-id="<?= $produk['id_produk']; ?>">
-                            <i class="fas fa-shopping-basket"></i>
-                            <span>add to cart</span>
-                        </button>
-                    </div>
+                    <?php if (is_ecommerce()) : ?>
+                        <div class="details-add-group">
+                            <button <?php if ($produk['stok'] == 0) { ?> disabled <?php } ?> class="product-add add-cart" title="Add to Cart" data-name="<?= $produk['nama_produk']; ?>" data-price="<?= $produk['harga'] ?>" data-id="<?= $produk['id_produk']; ?>">
+                                <i class="fas fa-shopping-basket"></i>
+                                <span>add to cart</span>
+                            </button>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

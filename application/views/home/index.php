@@ -135,10 +135,12 @@
                                     <?php } ?>
                                     <span>$<?= $p['harga']; ?></span>
                                 </h6>
-                                <button class="product-add add-cart" title="Add to Cart" data-name="<?= $p['nama_produk']; ?>" data-price="<?= $p['harga'] ?>" data-id="<?= $p['id_produk']; ?>">
-                                    <i class="fas fa-shopping-basket"></i>
-                                    <span>add</span>
-                                </button>
+                                <?php if (is_ecommerce()) : ?>
+                                    <button class="product-add add-cart" title="Add to Cart" data-name="<?= $p['nama_produk']; ?>" data-price="<?= $p['harga'] ?>" data-id="<?= $p['id_produk']; ?>">
+                                        <i class="fas fa-shopping-basket"></i>
+                                        <span>add</span>
+                                    </button>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

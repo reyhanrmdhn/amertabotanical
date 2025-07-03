@@ -19,3 +19,14 @@ function is_logged_in()
         }
     }
 }
+
+function is_ecommerce()
+{
+    $ci = get_instance();
+    $page_setting = $ci->db->get_where('page_setting', ['id' => 1])->row_array();
+    if ($page_setting['ecommerce_status'] == 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
