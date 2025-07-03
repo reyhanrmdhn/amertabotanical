@@ -9,18 +9,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- AUTHOR META -->
-    <meta name="author" content="mironcoder">
-    <meta name="email" content="mironcoder@gmail.com">
-    <meta name="profile" content="https://themeforest.net/user/mironcoder">
+    <meta name="author" content="reyhanrmdhn">
+    <meta name="email" content="reyhanrmdhn1@gmail.com">
+    <meta name="profile" content="https://reyhanrmdhn.com">
     <!-- TEMPLATE META -->
-    <meta name="name" content="Greeny">
-    <meta name="title" content="Greeny - eCommerce HTML Template">
-    <meta name="keywords" content="organic, food, shop, ecommerce, store, html, bootstrap, template, agriculture, vegetables, webshop, farm, grocery, natural, online store">
+    <meta name="name" content="Amerta Botanical">
+    <meta name="title" content="Amerta Botanical - Best Kratom from Indonesia">
+    <meta name="keywords" content="kratom, amerta, botanical, herbal, indonesia, kratom powder, kratom capsules, kratom extract, kratom tea, organcic kratom, red vein kratom, green vein kratom, white vein kratom, kratom for pain, kratom for anxiety, kratom for energy">
     <!--=====================================
                     META-TAG PART END
         =======================================-->
     <!-- WEBPAGE TITLE -->
-    <title>Home | Amerta Botanical</title>
+    <title>Amerta Botanical</title>
     <!--=====================================
                     CSS LINK PART START
         =======================================-->
