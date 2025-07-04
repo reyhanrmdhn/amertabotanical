@@ -165,16 +165,18 @@
             </div>
             </form>
         <?php } else { ?>
-            <div class="cart-header">
-                <div class="cart-total">
-                    <i class="fas fa-shopping-basket"></i>
-                    <span>total item (0)</span>
+            <?php if (is_ecommerce()) : ?>
+                <div class="cart-header">
+                    <div class="cart-total">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span>total item (0)</span>
+                    </div>
+                    <button class="cart-close"><i class="icofont-close"></i></button>
                 </div>
-                <button class="cart-close"><i class="icofont-close"></i></button>
-            </div>
-            <div style="height: 500px;display:flex;justify-content:center">
-                <h3 class="my-auto text-danger">Cart Empty</h3>
-            </div>
+                <div style="height: 500px;display:flex;justify-content:center">
+                    <h3 class="my-auto text-danger">Cart Empty</h3>
+                </div>
+            <?php endif; ?>
         <?php } ?>
     </aside>
     <!--=====================================
@@ -196,12 +198,14 @@
                     <h4 class="nav-name"><a href="profile.html">Miron Mahmud</a></h4>
                 </div>
             <?php } else { ?>
-                <div class="nav-btn mt-3 mb-0" style="border-radius: 10px">
-                    <a href="<?= base_url('auth') ?>" class="btn btn-inline">
-                        <i class="fa fa-unlock-alt"></i>
-                        <span>Login Required</span>
-                    </a>
-                </div>
+                <?php if (is_ecommerce()) : ?>
+                    <div class="nav-btn mt-3 mb-0" style="border-radius: 10px">
+                        <a href="<?= base_url('auth') ?>" class="btn btn-inline">
+                            <i class="fa fa-unlock-alt"></i>
+                            <span>Login Required</span>
+                        </a>
+                    </div>
+                <?php endif; ?>
             <?php } ?>
             <div class="nav-select-group">
             </div>
@@ -257,11 +261,13 @@
             <i class="fas fa-images" <?php if ($this->uri->segment(1) == "gallery") { ?> style="color:#A6D064" <?php } ?>></i>
             <span <?php if ($this->uri->segment(1) == "gallery") { ?> style="color:#A6D064" <?php } ?>>gallery</span>
         </a>
-        <button class="cart-btn" title="Cart">
-            <i class="fas fa-shopping-basket"></i>
-            <span>cart</span>
-            <sup class="cart-item-total"></sup>
-        </button>
+        <?php if (is_ecommerce()) : ?>
+            <button class="cart-btn" title="Cart">
+                <i class="fas fa-shopping-basket"></i>
+                <span>cart</span>
+                <sup class="cart-item-total"></sup>
+            </button>
+        <?php endif; ?>
     </div>
     <!--=====================================
                     MOBILE-MENU PART END

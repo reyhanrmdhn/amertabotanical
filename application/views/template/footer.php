@@ -49,6 +49,9 @@
                             <p>
                                 <span>info@amertabotanical.com</span>
                             </p>
+                            <p>
+                                <span>amertapersada09@gmail.com</span>
+                            </p>
                         </li>
                         <li>
                             <i class="icofont-ui-touch-phone"></i>
